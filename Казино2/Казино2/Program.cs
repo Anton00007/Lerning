@@ -24,10 +24,10 @@ while (balance > 0 && B)
         }
         while (C)
         {
-            if (bet1 > balance)
+            if (bet1 > balance || bet1 <= 0)
             {
-                Console.WriteLine("You don't have enough funds.");
-                Console.WriteLine("Your balance: "); Console.WriteLine(balance);
+                string balance1 = Convert.ToString(balance);
+                Console.WriteLine("Incorrect bid value entered, enter a value from 1 to " + balance1);
                 C = false;
             }
             else
@@ -38,7 +38,6 @@ while (balance > 0 && B)
                     string num1 = Console.ReadLine();
                     if (num1 == "0" || num1 == "1")
                     {
-
                         int num = Convert.ToInt32(num1);
                         int randomValue = rand.Next(0, 2); // Сгенерировать рандомное число
                         Console.WriteLine(randomValue);
@@ -62,7 +61,7 @@ while (balance > 0 && B)
                 }
             }
         }
-        Console.Write("balance: ");
+        Console.WriteLine("Your balance: ");
         Console.WriteLine(balance);
     }
 
