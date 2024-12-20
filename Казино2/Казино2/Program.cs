@@ -3,10 +3,9 @@ Console.Write("balance: ");
 Console.WriteLine(balance);
 Random rand = new Random();
 int bet1 = 0;
-bool B = true;
 bool C = true;
 
-while (balance > 0 && B)
+while (balance > 0)
 {
         C = true;
         Console.WriteLine("Input bet:");
@@ -14,8 +13,9 @@ while (balance > 0 && B)
 
         if (bet == "exit")
         {
-            B = false;
-            C = false;
+        Console.WriteLine("Your balance: ");
+        Console.WriteLine(balance);
+        break;
         }
         else
         {
@@ -63,10 +63,10 @@ while (balance > 0 && B)
 
             }
 
-        }
-
         Console.WriteLine("Your balance: ");
         Console.WriteLine(balance);
+
+    }
 
 }
 Console.Write("Game over");
